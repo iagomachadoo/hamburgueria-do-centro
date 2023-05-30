@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('banners', function (Blueprint $table) {
             $table->id();
-             $table->string('banner_desktop');
+            $table->string('banner_desktop');
             $table->string('banner_mobile');
             $table->string('titulo', 45);
             $table->string('subtitulo', 50);
+            $table->boolean('visivel')->default(0);
             $table->timestamps();
         });
     }
