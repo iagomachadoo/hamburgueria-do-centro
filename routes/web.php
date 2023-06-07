@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BannerController;
+use App\Http\Controllers\PainelController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [SiteController::class, 'index'])->name('site.index');
+
+// Rotas admin
+Route::prefix('painel')->name('painel.')->group(function(){
+    // Route::permanentRedirect('/painel', '/painel/banner');
+
+    Route::resource('/banner', BannerController::class);
+});

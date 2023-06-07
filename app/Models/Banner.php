@@ -14,5 +14,6 @@ class Banner extends Model
         'banner_mobile',
         'titulo',
         'subtitulo',
+        'visivel'
     ];
 }
